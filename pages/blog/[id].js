@@ -37,7 +37,9 @@ export default function BlogPost({postData, adjacentPosts}){
         />
       </div>
     )}
-    <p className="text-left  px-8"><a >{`By ${postData.author} `}</a></p>
+    <Link href={`/people/${postData.authorHref}`}>
+      <a className="text-left  px-8">{`By ${postData.author} `}</a>
+    </Link>
     <div className="px-8 mt-0 flex flex-row items-center justify-start w-full">
       <time dateTime={postData.date}>{format(date, 'LLLL d, yyyy')}</time>
     </div>
@@ -67,8 +69,6 @@ export default function BlogPost({postData, adjacentPosts}){
         <Link href={'/'}>
           <a
             className="flex items-center justify-center"
-            target="_blank"
-            rel="noopener noreferrer"
           >
            Dayton Local Music
          </a>

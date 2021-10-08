@@ -4,7 +4,6 @@ import { parseISO, format } from 'date-fns'
 
 export default function BlogPostCard({id, img, imgAlt, display, title, author, date, summary}){
   const postDate = parseISO(date)
-
   return(
     <div>
     {(display==='featured')? (
@@ -26,7 +25,7 @@ export default function BlogPostCard({id, img, imgAlt, display, title, author, d
               <div className="w-full text-left">
                 <h2 className="my-2 text-base text-center font-bold">{title}</h2>
                 <p className="my-2 text-base">{summary}</p>
-                <p className="w-full  text-sm">{`By ${author}`}</p>
+                <p className="w-full text-sm">{`By ${author}`}</p>
               </div>
             </div>
           </a>

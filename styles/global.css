@@ -11,7 +11,9 @@
 .postContent p{
   @apply text-base text-left my-2
 }
-
 .postContent a{
   @apply text-blue-500
+}
+.postContent img{
+  @apply my-2
 }

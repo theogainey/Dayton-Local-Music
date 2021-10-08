@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import EventCard from '../components/EventCard'
 import BlogPostCard from '../components/BlogPostCard'
-import {getSortedPostsData} from '../lib/markdownToHtml'
-import {getSortedEventsData} from '../lib/events'
+import {getSortedPostsData, getSortedEventsData} from '../lib/markdownToHtml'
+
 export default function Home({allPostsData, allEventsData}) {
   const topPost = allPostsData[0]
   return (
@@ -35,7 +35,11 @@ export default function Home({allPostsData, allEventsData}) {
           <h2 className="mt-4 text-4xl font-bold">Featured Events</h2>
         </div>
         <div >
-          <h2 className="mt-4 text-4xl font-bold">News</h2>
+          <h2 className="mt-4 text-4xl font-bold">
+            <Link href={'/blog'}>
+              <a>Blog</a>
+            </Link>
+          </h2>
           <div className="divide-y  divide-solid">
             {allPostsData.slice(1,4).map((post)=>
               <BlogPostCard key={post.id} {...post} />
@@ -48,11 +52,7 @@ export default function Home({allPostsData, allEventsData}) {
       </main>
       <footer className="flex items-center justify-center w-full h-24 border-t">
         <Link href={'/'}>
-          <a
-            className="flex items-center justify-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="flex items-center justify-center">
            Dayton Local Music
          </a>
         </Link>
@@ -63,7 +63,7 @@ export default function Home({allPostsData, allEventsData}) {
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
-  const allEventsData = getSortedEventsData()
+  const allEventsData = getSortedEventsData(4)
 
   return {
     props: {
