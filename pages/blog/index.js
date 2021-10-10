@@ -1,45 +1,42 @@
+import { useState } from 'react';
 import Head from 'next/head'
 import Link from 'next/link'
 import {getSortedPostsData} from '../../lib/markdownToHtml'
+import Layout from '../../components/Layout'
 import BlogPostCard from '../../components/BlogPostCard'
+import EmailForm from '../../components/EmailForm'
 
 export default function Blog({allPostsData}){
-  const topPost = allPostsData[0]
-
+  const [searchValue, setSearchValue] = useState('')
+  const filterPosts = allPostsData.slice(1).filter((post) =>
+      post.title.toLowerCase().includes(searchValue.toLowerCase())
+    )
   return(
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout>
       <Head>
-        <title>Dayton Local Music - Blog</title>
+        <title>Blog-Dayton Local Music</title>
       </Head>
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-6 mb-6 text-center divide-y  divide-solid">
-        <div className="mt-4 mb-2">
-          <h1 className="text-6xl font-bold ">
-            Blog
-          </h1>
+      <h1 className="mt-4 mb-2 text-6xl font-bold ">Blog</h1>
+      <div>
+        <BlogPostCard display="featured" {...allPostsData[0]}/>
+      </div>
+      <EmailForm/>
+      <div className="w-full my-2">
+        <input
+          type="text"
+          onChange={(e) => setSearchValue(e.target.value)}
+          placeholder="Search articles"
+          className="w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md  focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <div >
+        <div className="divide-y  divide-solid">
+          {filterPosts.map((post)=>
+            <BlogPostCard key={post.id} {...post} />
+          )}
         </div>
-        <div >
-          <BlogPostCard display="featured" {...topPost}/>
-        </div>
-        <div >
-          <div className="divide-y  divide-solid">
-            {allPostsData.slice(1).map((post)=>
-              <BlogPostCard key={post.id} {...post} />
-            )}
-          </div>
-        </div>
-      </main>
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <Link href={'/'}>
-          <a
-            className="flex items-center justify-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-           Dayton Local Music
-         </a>
-        </Link>
-       </footer>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

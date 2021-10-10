@@ -25,7 +25,10 @@ export default function BlogPostCard({id, img, imgAlt, display, title, author, d
               <div className="w-full text-left">
                 <h2 className="my-2 text-base text-center font-bold">{title}</h2>
                 <p className="my-2 text-base">{summary}</p>
-                <p className="w-full text-sm">{`By ${author}`}</p>
+                <div className="w-full flex flex-row items-center justify-between text-sm">
+                  <p>{author}</p>
+                  <time dateTime={date}>{format(postDate, 'LLLL d, yyyy')}</time>
+                </div>
               </div>
             </div>
           </a>

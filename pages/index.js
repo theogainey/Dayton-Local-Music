@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Layout from '../components/Layout'
 import EventCard from '../components/EventCard'
 import BlogPostCard from '../components/BlogPostCard'
+import EmailForm from '../components/EmailForm'
 import {getSortedPostsData, getSortedEventsData} from '../lib/markdownToHtml'
 
 export default function Home({allPostsData, allEventsData}) {
-  const topPost = allPostsData[0]
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout >
       <Head>
         <title>Dayton Local Music</title>
         <link rel="canonical" href="https://www.daytonlocalmusic.com" key="canonical"/>
@@ -22,48 +23,45 @@ export default function Home({allPostsData, allEventsData}) {
         <meta property="twitter:title" content="Dayton Local Music"  />
         <meta property="twitter:description"content="Your guide to Dayton Ohio's independent music scene"/>
       </Head>
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-6 mb-6 text-center divide-y  divide-solid">
-        <div className="mt-4 mb-2">
-          <h1 className="text-6xl font-bold ">
-            Dayton Local Music
-          </h1>
+      <BlogPostCard display="featured" {...allPostsData[0]}/>
+      <div>
+        <h2 className="mt-4 text-4xl font-bold">Featured Events</h2>
+        <div className="flex flex-row items-start justify-center">
+          {allEventsData.slice(0,2).map((evt)=>
+            <EventCard display="featured" key={evt.id} {...evt} />
+          )}
         </div>
-        <div >
-          <BlogPostCard display="featured" {...topPost}/>
+      </div>
+      <div >
+        <h2 className="mt-4 text-4xl font-bold">Latest Blog Posts</h2>
+        <div className="divide-y  divide-solid">
+          {allPostsData.slice(1).map((post)=>
+            <BlogPostCard key={post.id} {...post} />
+          )}
         </div>
-        <div className="w-full">
-          <h2 className="mt-4 text-4xl font-bold">Featured Events</h2>
-        </div>
-        <div >
-          <h2 className="mt-4 text-4xl font-bold">
-            <Link href={'/blog'}>
-              <a>Blog</a>
-            </Link>
-          </h2>
-          <div className="divide-y  divide-solid">
-            {allPostsData.slice(1,4).map((post)=>
-              <BlogPostCard key={post.id} {...post} />
-            )}
-          </div>
-        </div>
-        <div className="w-full">
-          <h2 className="mt-4  text-4xl font-bold">Events </h2>
-        </div>
-      </main>
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <Link href={'/'}>
-          <a className="flex items-center justify-center">
-           Dayton Local Music
-         </a>
+        <Link href={'/blog'}>
+          <a>
+            <p className="text-lg font-bold text-center underline	my-2">MORE BLOG POSTS</p>
+          </a>
         </Link>
-       </footer>
-    </div>
+      </div>
+      <div className="w-full">
+        <h2 className="mt-4  text-4xl font-bold">Upcoming Events </h2>
+        {allEventsData.slice(2).map((evt)=>
+          <EventCard  key={evt.id} {...evt} />
+        )}
+        <Link href={'/events'}>
+          <a><p className="text-lg font-bold text-base text-center underline	my-2">MORE EVENTS</p></a>
+        </Link>
+      </div>
+      <EmailForm/>
+    </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  const allEventsData = getSortedEventsData(4)
+  const allPostsData = getSortedPostsData(4)
+  const allEventsData = getSortedEventsData()
 
   return {
     props: {

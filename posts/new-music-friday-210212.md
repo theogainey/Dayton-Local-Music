@@ -1,0 +1,25 @@
+---
+title: "New Music Friday: New Music Released By Dayton Musicians (2/12)"
+summary: "Check out some great new music from Dayton area musicians."
+img: "images/annie-theby-unsplash.jpeg"
+imgAlt: "Annie Theby - Unsplash"
+author: "Theo Gainey"
+authorTwitter: "@GaineyTheo"
+date: "2021-02-12"
+---
+
+While it has only been a little over a month into the new year, for many Dayton area musicians 2021 is already off to a great start. In fact, several local musicians have released some great new music just today. If you are not yet excited about what 2021 will bring to Dayton's music scene, you will be after checking out these great new releases.
+
+## Boxcar Suite - Turndt Awn
+![Boxcar Suite - Turndt Awn](/images/boxcar-suite-every-side-abyss.jpeg)
+First up on our list of new music released today by Dayton musicians is the latest single from [The Boxcar Suite](https://www.theboxcarsuite.com/), titled "Turndt Awn". In addition to being some of the greatest work to date by the band, this single also serves as a preview of the band's upcoming album *Every Side of the Abyss*. Among the many reasons to be excited about this single and the upcoming album is that this album features some of the last recording guitarist Tony Moore made with the band before moving out of the country. Currently "Turdnt Awn" is available on all major streaming services and can be purchased on The Boxcar Suite's [Bandcamp page](https://theboxcarsuite.bandcamp.com/track/turndt-awn).
+
+## Gabe Maas & The Bruins - Stranger
+![Gabe Maas & The Bruins - Stranger](/images/gabe-maas-stranger.jpeg)
+
+Another Dayton area artist who released new music today is [Gabe Maas and the Bruins](https://www.facebook.com/Gmatbband). Today this newer Dayton area artist released his first single that was entirely self-written and produced. This new single, titled "Stranger" is a great example of this artist's style of pop music. After making it to the finals of last year's Battle of the Bands at The Brightside, it became clear to many that this area musician is someone to keep an eye on. If you haven't check out his music yet, you can find "Stranger" on [Spotify](https://distrokid.com/hyperfollow/gabemaasandthebruins/stranger?fbclid=IwAR0nl5D8JEdLAOUCWFWA8ec4btUoUBoTUCTaVS_qel4TSnr77h2G8rnbExQ) and other streaming services.
+
+## TV Queens - Swallow Up The Stars
+![TV Queens - Bad Fiction](/images/tv-queens-bad-fiction.jpeg)
+
+Last on our list is the new single, titled "Swallow up the Stars", from Overthought Musik's latest project, TV Queens. For this new project, Darryl has teamed up with Dayton area musicians Nathan Peters (Lioness and Captain of industry) and Maria Dixon (Me & Mountains and Lioness). If you like this new single you won't have to wait long for more because this song comes off of the band's upcoming album, *Bad Fiction* that will be released on February 19th. While *Bad Fiction* is still a week away from release, you can find this new single and preorder the album TV Queens's [Bandcamp page](https://tvqueens.bandcamp.com/).
