@@ -6,6 +6,7 @@ imgAlt: "Mick Haupt - Unsplash"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-03-24"
+category: "Music"
 ---
 Hey, music fans. March is almost over which means spring is almost here. While spring may not be here just yet, we do have some new music from Dayton area musicians for you to check out. So if you are like us and you like new music be sure to do yourself a favor and check out these great new releases.
 

@@ -6,6 +6,7 @@ imgAlt: "K.Carter's New Album"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-01-30"
+category: "Music"
 ---
 Since his 2015 debut album, *Revenge of the Nerd*, K.Carter has been one of the more active voices in Dayton's hip-hop community. Although the pandemic has slowed down Dayton's music scene, K.Carter has still been hard at work writing and recording new music. Now after a little more than a year since his last full-length album, *NBX*, on January 23rd K.Carter released his latest full-length album titled *K.Carter's New Album*.
 

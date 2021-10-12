@@ -6,6 +6,7 @@ imgAlt: "Blocks - Unsplash"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2020-12-17"
+category: "Music"
 ---
 
 Last week we posted [part 1](https://www.daytonlocalmusic.com/blog/local-music-second-half-2020pw) of our list of some of our favorite recent local releases. Today we are back with part 2. If you haven't checked out [part 1](https://www.daytonlocalmusic.com/blog/local-music-second-half-2020pw) of our list yet, be sure to because it contains some really great locally made music.

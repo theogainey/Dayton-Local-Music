@@ -6,6 +6,7 @@ imgAlt: "Caleb Woods"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-01-10"
+category: "Music"
 ---
 While it has only been a little over a week into the new year, for many Dayton area musicians 2021 is already off to a great start. In fact, many local musicians have already released some great new music. If you are not yet excited about what 2021 will bring to Dayton's music scene, you will be after checking out these great new releases.
 

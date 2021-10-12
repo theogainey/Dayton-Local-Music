@@ -6,6 +6,7 @@ imgAlt: "Bandcamp Firday"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-02-05"
+category: "Music"
 ---
 Since the onset of the global pandemic last year, many independent musicians have seen a countless number of their live performances canceled. As a result, these musicians have lost an important source of income that many of them have come to depend on. In order to help these musicians, the popular online sales platform [Bandcamp](https://bandcamp.com/) has been periodically waving the fees they charge musicians who sell music on the platform. Due to the fact that these fee-free days come on the first Friday of every month, the fee waiver has become affectionately known as Bandcamp Friday.
 

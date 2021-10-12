@@ -6,6 +6,7 @@ imgAlt: "Anthony Martino - Unsplash"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-03-05"
+category: "Music"
 ---
 For some, Friday means the start of the weekend, but for music fans, Friday means new music. So if you are like us and you like new music be sure to check out these great new releases from Dayton area musicians.
 

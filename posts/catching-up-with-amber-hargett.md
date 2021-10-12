@@ -6,6 +6,7 @@ imgAlt: "Amber Hargett"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-03-11"
+category: "Music"
 ---
 
 It has been a year since the coronavirus pandemic has turned the world upside down. Since then, everyone has had their own unique experience that has shaped their life in previously unimaginable ways. Although no two experiences have been the same, everyone has felt the effects of the pandemic one way or another. Recently we got a chance to talk to local singer-songwriter Amber Hargett and learn about how the pandemic has affected her music career.

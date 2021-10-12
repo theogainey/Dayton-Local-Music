@@ -25,7 +25,7 @@ export default function Home({allPostsData, allEventsData}) {
       </Head>
       <BlogPostCard display="featured" {...allPostsData[0]}/>
       <div>
-        <h2 className="mt-4 text-4xl font-bold">Featured Events</h2>
+        <h2 className="mt-4 mb-2 text-4xl font-bold">Featured Events</h2>
         <div className="flex flex-row items-start justify-center">
           {allEventsData.slice(0,2).map((evt)=>
             <EventCard display="featured" key={evt.id} {...evt} />
@@ -33,7 +33,7 @@ export default function Home({allPostsData, allEventsData}) {
         </div>
       </div>
       <div >
-        <h2 className="mt-4 text-4xl font-bold">Latest Blog Posts</h2>
+        <h2 className="mt-4 mb-2 text-4xl font-bold">Latest Blog Posts</h2>
         <div className="divide-y  divide-solid">
           {allPostsData.slice(1).map((post)=>
             <BlogPostCard key={post.id} {...post} />

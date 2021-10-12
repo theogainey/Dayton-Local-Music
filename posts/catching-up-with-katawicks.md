@@ -6,6 +6,7 @@ imgAlt: "The Katawicks"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-02-11"
+category: "Music"
 ---
 After almost a year since the first shutdowns caused by COVID-19 hit the country, it is fair to say it's been a long pandemic. While far from the only ones, the livelihoods of small-time independent musicians have been hit especially hard. If you are like us you have probably wondered how exactly the pandemic has been affecting musicians in the Dayton area. In order to find out, we reached out to several area musicians to ask them just that. Because the pandemic has affected everyone differently we have put together a series of blog posts about how different Dayton area musicians have experienced it. To kick off this series, here is what we learned when we talked to [The Katawicks](https://www.facebook.com/thekatawicks) about their experiences during the pandemic.
 

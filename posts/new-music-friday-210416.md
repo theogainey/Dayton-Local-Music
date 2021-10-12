@@ -6,6 +6,7 @@ imgAlt: "Karsten Winegeart - Unsplash"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-04-16"
+category: "Music"
 ---
 
 Just like most Fridays, we have some new music from some of the Dayton area’s best musicians to share with you. If you like what see be sure to tell others about it because music is best when it is enjoyed by all.

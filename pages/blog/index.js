@@ -8,7 +8,8 @@ import EmailForm from '../../components/EmailForm'
 
 export default function Blog({allPostsData}){
   const [searchValue, setSearchValue] = useState('')
-  const filterPosts = allPostsData.slice(1).filter((post) =>
+  const [postIndex, setPostIndex] = useState(0)
+  const filterPosts = allPostsData.filter((post) =>
       post.title.toLowerCase().includes(searchValue.toLowerCase())
     )
   return(
@@ -20,7 +21,6 @@ export default function Blog({allPostsData}){
       <div>
         <BlogPostCard display="featured" {...allPostsData[0]}/>
       </div>
-      <EmailForm/>
       <div className="w-full my-2">
         <input
           type="text"
@@ -31,11 +31,15 @@ export default function Blog({allPostsData}){
       </div>
       <div >
         <div className="divide-y  divide-solid">
-          {filterPosts.map((post)=>
+          {filterPosts.slice(1, (6+(postIndex*5))).map((post)=>
             <BlogPostCard key={post.id} {...post} />
           )}
         </div>
+        <a onClick={()=>setPostIndex(postIndex+1)}>
+          <p className="text-lg font-bold text-center underline	my-2">LOAD MORE</p>
+        </a>
       </div>
+      <EmailForm/>
     </Layout>
   )
 }

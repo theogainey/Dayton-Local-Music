@@ -1,0 +1,23 @@
+---
+title: "Great New Local Music From The Second Half of 2020(part 1)"
+summary: "Check out some great new music released by Dayton area muscians in 2020"
+img: "images/blocks-unsplash.jpeg"
+imgAlt: "Blocks - Unsplash"
+author: "Theo Gainey"
+authorTwitter: "@GaineyTheo"
+date: "2020-12-10"
+category: "Music"
+---
+Although we haven't been completely silent over the last few months, our blog posts about new music have been few and far between. Since June we haven't covered anywhere near all the great new music released by Dayton area musicians. In order to correct that wrong and make sure our readers are up to date on the latest new music from Dayton area artists, we have put together a list of some of our favorite recent local releases. Additionally, we have decided to publish this list in two parts so be sure to check back later this week for part 2 of our list.
+
+## The 1984 Draft - *Destination Breakdown*
+![The 1984 Draft - Destination Breakdown]('/images/1984-draft-destination-breakdown.jpeg')
+Up first on our list of great new local music is the latest single from [The 1984 Draft](https://www.facebook.com/The1984Draft/). Released on November 27th, this double-sided single titled *Destination Breakdown* is the first new music from the band since their 2018 album Makes Good Choices. If you are already a fan of the band, you are sure to love *Destination Breakdown*. If not, be sure to introduce yourself to The 1984 Draft's brand of punk-influenced alternative rock by checking out this great new single. In addition to being available for streaming on Spotify & Apple Music, *Destination Breakdown* is also available for digital download on [Bandcamp](https://the1984draft.bandcamp.com/).
+
+## This Pine Box - "Whatchya Got"
+![This Pine Box - "Whatchya Got"]('images/this-pine-box-whatchya-got.jpeg')
+Next on our list, and also released on November 27th, is “Whatcha Got”, the latest single from [This Pine Box](https://www.facebook.com/thispinebox). Although This Pine Box managed to release several singles this year, unfortunately, many of the band's plans for the year have not yet materialized. Before the outbreak of the COVID-19 pandemic, the band was on track to release a new single every month and a full-length album in the fall. Instead, they now plan to start off 2021 strong by releasing an EP in January 2021. In the meantime be sure to check out “Whatcha Got” and all the rest of their excellent discography.
+
+## The Katawicks - In The Pocket
+![The Katawicks - In The Pocket]('images/katawicks-in-the-pocket.jpeg')
+Since the band's 2018 return to the Dayton music scene, few bands have generated as much excitement as [The Katawicks](https://www.facebook.com/thekatawicks/) have. After previously releasing a few singles, the band finally released their first EP *In The Pocket* on August 28th. If you're interested in finding out what The Katawicks are all about, the EP is available for listening on Spotify, Apple Music, and Amazon Music. Be sure to keep an eye on this band as their first full-length album is due out in 2021.

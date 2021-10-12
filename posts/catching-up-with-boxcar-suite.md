@@ -6,6 +6,7 @@ imgAlt: "Boxcar Suite"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-03-03"
+category: "Music"
 ---
 It has been about a year since the coronavirus pandemic has turned the world upside down. Since then, everyone has had their own unique experience that has shaped their life in previously unimaginable ways. Although no two experiences have been the same, everyone’s story features a transition into a new normal. Recently we got a chance to talk to The Boxcar Suite and learn a little about their new normal.
 

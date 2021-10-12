@@ -6,6 +6,7 @@ imgAlt: "Annie Theby - Unsplash"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-02-12"
+category: "Music"
 ---
 
 While it has only been a little over a month into the new year, for many Dayton area musicians 2021 is already off to a great start. In fact, several local musicians have released some great new music just today. If you are not yet excited about what 2021 will bring to Dayton's music scene, you will be after checking out these great new releases.

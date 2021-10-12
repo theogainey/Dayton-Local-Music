@@ -6,6 +6,7 @@ imgAlt: "Eric Krull"
 author: "Theo Gainey"
 authorTwitter: "@GaineyTheo"
 date: "2021-02-19"
+category: "Music"
 ---
 For some, Friday means the start of the weekend, but for music fans, Friday means new music. Just like last Friday, several Dayton area musicians have released some great new music today. For this reason, we are very excited to share these great new releases from local musicians with you.
 

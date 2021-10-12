@@ -1,30 +1,46 @@
+import { useState } from 'react';
 import Link from 'next/link'
 
 export default function Layout({children}){
+  const [clicked, setClicked] = useState(false)
 
   return(
-    <div className="overflow-hidden	 flex flex-col items-center justify-center min-h-screen">
-      <header  className="fixed block shadow-sm inset-0 z-10 bg-white h-16 w-full  border-b">
-        <button className="absolute top-4 left-2">
-          <svg height="2rem" width="2rem" viewBox={"0 0 24 24"} fill={"#616161"}>
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-          </svg>
-        </button>
-        <span className="absolute w-full top-4		text-center	">
-          <Link href={'/'} >
-            <a className="text-2xl font-bold ">DAYTON UNCOVERED</a>
-          </Link>
-        </span>
+    <div className="overflow-hidden	 flex flex-col items-center justify-center w-full	 min-h-screen">
+      <header>
+        <nav  className="fixed block shadow-sm inset-0 z-10 bg-white h-16 w-full  border-b">
+          <button className="absolute top-4 z-20 left-2" type="button" onClick={()=>setClicked(!clicked)}>
+            <svg height="2rem" width="2rem" viewBox={"0 0 24 24"} fill={"#616161"}>
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+          </button>
+          <span className="absolute w-full top-4 	text-center	">
+            <Link href={'/'} >
+              <a className="text-2xl font-bold ">DAYTON UNCOVERED</a>
+            </Link>
+          </span>
+        </nav>
+        {clicked &&(
+        <nav className="fixed  top-16 left-0 z-10  text-base text-left font-bold  w-full h-auto shadow-sm border-b bg-white divide-y  divide-solid flex flex-col">
+          <Link href={'/'} ><a className="pl-6 py-2">Home</a></Link>
+          <Link href={'/about'} ><a className="pl-6 py-2">About</a></Link>
+          <Link href={'/blog'} ><a  className="pl-6 py-2">Blog</a></Link>
+          <a  className="pl-6 py-2">Contact</a>
+          <Link href={'/events'} ><a  className="pl-6 py-2"> Events</a></Link>
+          <Link href={'/people'} ><a  className="pl-6 py-2">People</a></Link>
+        </nav>
+        )}
       </header>
-      <main className="mt-16 py-2 px-6 h-auto w-full mb-6 text-center divide-y  divide-solid">{children}</main>
+      <main className="mt-16 py-2 px-6 h-auto w-full mb-6 text-center divide-y  divide-solid">
+        {children}
+      </main>
       <footer className="w-screen	mb-0 mt-auto  bg-gray-100 flex flex-col items-center justify-center h-auto p-4 border-t">
-        <div className="w-full flex flex-row items-center justify-center ">
-          <a className="px-2">About</a>
+        <nav className="w-full flex flex-row items-center justify-center ">
+          <Link href={'/about'} ><a className="px-2">About</a></Link>
           <Link href={'/blog'} ><a className="px-2">Blog</a></Link>
           <a className="px-2">Contact</a>
-          <Link href={'/blog'} ><a className="px-2">Events</a></Link>
-          <a className="px-2">People</a>
-        </div>
+          <Link href={'/events'} ><a className="px-2">Events</a></Link>
+          <Link href={'/people'} ><a className="px-2">People</a></Link>
+        </nav>
         <Link href={'/'}>
           <a >
             &copy; 2021 Dayton Uncovered
