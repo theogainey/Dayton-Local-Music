@@ -1,28 +1,16 @@
 import {useRef} from 'react';
-import {useSubscriber} from '../lib/subscribers'
+import { useUser } from '@auth0/nextjs-auth0';
 
 export default function EmailForm(){
-  const [state, dispatch] = useSubscriber()
   const formRef = useRef(null);
+  const { user, error, isLoading } = useUser();
 
   return(
     <>
-    {(state.subscribed==='subscribed') &&(
+    {user? (
       <div className="py-2 my-2"/>
-    )}
-    {(state.subscribed==='new') &&(
-      <div className="w-full py-2 my-2 flex flex-col items-center justify-center">
-        <h3 className=" text-xl font-bold">Thank You!</h3>
-        <p className="text-center py-2">Be sure to check your inbox to confirm your subscription</p>
-        <button
-          className=" flex items-center justify-center   px-4 py-1 font-medium h-auto bg-gray-100 text-gray-900 rounded w-28"
-          type="button"
-          onClick={()=> dispatch({type: 'subscribed'})}>
-          Dismiss
-        </button>
-      </div>
-    )}
-    {(state.subscribed==='false') &&(
+    ):(
+
     <div className="w-full py-2 my-2">
       <h3 className=" text-xl font-bold">Never Miss Another Post!</h3>
       <p className="text-left py-2">Sign up to receive Dayton Local Music's free newsletter, which includes updates on all the latest music news and upcoming events in Dayton, Ohio.</p>
@@ -47,3 +35,18 @@ export default function EmailForm(){
 </>
   )
 }
+
+/*
+{(state.subscribed==='new') &&(
+  <div className="w-full py-2 my-2 flex flex-col items-center justify-center">
+    <h3 className=" text-xl font-bold">Thank You!</h3>
+    <p className="text-center py-2">Be sure to check your inbox to confirm your subscription</p>
+    <button
+      className=" flex items-center justify-center   px-4 py-1 font-medium h-auto bg-gray-100 text-gray-900 rounded w-28"
+      type="button"
+      onClick={()=> dispatch({type: 'subscribed'})}>
+      Dismiss
+    </button>
+  </div>
+)}
+*/

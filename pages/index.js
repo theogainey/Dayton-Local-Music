@@ -1,12 +1,21 @@
+import { useState } from 'react';
+import {getSortedPostsData, getSortedEventsData} from '../lib/markdownToHtml'
+import {useFeatures} from '../lib/featuretoggle'
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import EventCard from '../components/EventCard'
 import BlogPostCard from '../components/BlogPostCard'
 import EmailForm from '../components/EmailForm'
-import {getSortedPostsData, getSortedEventsData} from '../lib/markdownToHtml'
 
 export default function Home({allPostsData, allEventsData}) {
+  const [state, dispatch] = useFeatures()
+  const [searchValue, setSearchValue] = useState('')
+  const [postIndex, setPostIndex] = useState(0)
+  const filterPosts = allPostsData.filter((post) =>
+      post.title.toLowerCase().includes(searchValue.toLowerCase())
+    )
+
   return (
     <Layout >
       <Head>
@@ -26,24 +35,30 @@ export default function Home({allPostsData, allEventsData}) {
       <BlogPostCard display="featured" {...allPostsData[0]}/>
       <div >
         <h2 className="mt-4 mb-2 text-4xl font-bold">Latest Blog Posts</h2>
+        <div className="w-full my-2">
+          <input
+            type="text"
+            onChange={(e) => setSearchValue(e.target.value)}
+            placeholder="Search articles"
+            className="w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md  focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
         <div className="divide-y  divide-solid">
-          {allPostsData.slice(1).map((post)=>
+          {filterPosts.slice(1, (6+(postIndex*5))).map((post)=>
             <BlogPostCard key={post.id} {...post} />
           )}
         </div>
-        <Link href={'/blog'}>
-          <a>
-            <p className="text-lg font-bold text-center underline	my-2">MORE BLOG POSTS</p>
-          </a>
-        </Link>
+        <a onClick={()=>setPostIndex(postIndex+1)}>
+          <p className="text-lg font-bold text-center underline	my-2">MORE BLOG POSTS</p>
+        </a>
       </div>
-      <EmailForm/>
+      {(state.userAuthentication==='true') &&(<EmailForm/>)}
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData(4)
+  const allPostsData = getSortedPostsData()
   const allEventsData = getSortedEventsData()
 
   return {

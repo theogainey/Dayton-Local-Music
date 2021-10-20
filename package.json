@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^1.6.1",
     "aws-sdk": "^2.1005.0",
     "mdx-bundler": "^6.0.2",
     "next": "latest",

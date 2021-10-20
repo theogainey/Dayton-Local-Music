@@ -1,8 +1,12 @@
 import { useState } from 'react';
+import { useUser } from '@auth0/nextjs-auth0';
 import Link from 'next/link'
+import {useFeatures} from '../lib/featuretoggle'
 
 export default function Layout({children}){
   const [clicked, setClicked] = useState(false)
+  const { user, error, isLoading } = useUser();
+  const [state, dispatch] = useFeatures()
 
   return(
     <div className="overflow-hidden	 flex flex-col items-center justify-center w-full	 min-h-screen">
@@ -18,15 +22,27 @@ export default function Layout({children}){
               <a className="text-2xl font-bold ">DAYTON LOCAL MUSIC</a>
             </Link>
           </span>
+          {(state.userAuthentication==='true') &&(
+            <>
+          {user? (
+            <a className="absolute top-4 z-20 right-2" href="/api/auth/logout" >
+              <svg height="2rem" width="2rem" viewBox={"0 0 24 24"} fill={"#616161"}>
+                <path d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+              </svg>
+            </a>
+          ):(
+            <a className="absolute top-4 z-20 right-2" href="/api/auth/login" >
+              <svg height="2rem" width="2rem" viewBox={"0 0 24 24"} fill={"#616161"}>
+                <path d="M11,7L9.6,8.4l2.6,2.6H2v2h10.2l-2.6,2.6L11,17l5-5L11,7z M20,19h-8v2h8c1.1,0,2-0.9,2-2V5c0-1.1-0.9-2-2-2h-8v2h8V19z"/>
+              </svg>
+            </a>
+          )}
+        </>
+        )}
         </nav>
         {clicked &&(
         <nav className="fixed  top-16 left-0 z-10  text-base text-left font-bold  w-full h-auto shadow-sm border-b bg-white divide-y  divide-solid flex flex-col">
           <Link href={'/'} ><a className="pl-6 py-2">Home</a></Link>
-          <Link href={'/about'} ><a className="pl-6 py-2">About</a></Link>
-          <Link href={'/blog'} ><a  className="pl-6 py-2">Blog</a></Link>
-          <a  className="pl-6 py-2">Contact</a>
-          <Link href={'/events'} ><a  className="pl-6 py-2"> Events</a></Link>
-          <Link href={'/people'} ><a  className="pl-6 py-2">People</a></Link>
         </nav>
         )}
       </header>
@@ -35,10 +51,7 @@ export default function Layout({children}){
       </main>
       <footer className="w-screen	mb-0 mt-auto  bg-gray-100 flex flex-col items-center justify-center h-auto p-4 border-t">
         <nav className="w-full flex flex-row items-center justify-center ">
-          <Link href={'/about'} ><a className="px-2">About</a></Link>
-          <Link href={'/blog'} ><a className="px-2">Blog</a></Link>
-          <a className="px-2">Contact</a>
-          <Link href={'/people'} ><a className="px-2">People</a></Link>
+          <Link href={'/'} ><a className="px-2">Home</a></Link>
         </nav>
         <Link href={'/'}>
           <a >

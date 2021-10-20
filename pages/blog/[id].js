@@ -22,8 +22,8 @@ export default function BlogPost({adjacentPosts, postData:{source, frontMatter, 
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://www.daytonlocalmusic.com/blog/${id}`} />
         <meta property="og:description" content={`${frontMatter.summary}`}/>
-        {frontMatter.image &&(<meta property="og:image" content={`https://www.daytonlocalmusic.com/${frontMatter.image}`} />)}
-        {frontMatter.image &&(<meta property="twitter:image" content={`https://www.daytonlocalmusic.com/${frontMatter.image}`} />)}
+        {frontMatter.img &&(<meta property="og:image" content={`https://www.daytonlocalmusic.com/${frontMatter.img}`} />)}
+        {frontMatter.img &&(<meta property="twitter:image" content={`https://www.daytonlocalmusic.com/${frontMatter.img}`} />)}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:title" content={`${frontMatter.title}`} />
         <meta property="twitter:description" content={`${frontMatter.summary}`}/>
