@@ -1,2 +1,5 @@
-NEED TO HAVE BLANK LINE AFTER IMAGE IN MDX FILES
-OTHERWISE TEXT WONT BE WRAPPED IN P TAGS
+## About
+Blog built using Next.js
+
+## Project Structure
+- Framework - Next.js
