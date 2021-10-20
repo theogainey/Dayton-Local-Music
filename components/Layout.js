@@ -15,7 +15,7 @@ export default function Layout({children}){
           </button>
           <span className="absolute w-full top-4 	text-center	">
             <Link href={'/'} >
-              <a className="text-2xl font-bold ">DAYTON UNCOVERED</a>
+              <a className="text-2xl font-bold ">DAYTON LOCAL MUSIC</a>
             </Link>
           </span>
         </nav>
@@ -38,12 +38,11 @@ export default function Layout({children}){
           <Link href={'/about'} ><a className="px-2">About</a></Link>
           <Link href={'/blog'} ><a className="px-2">Blog</a></Link>
           <a className="px-2">Contact</a>
-          <Link href={'/events'} ><a className="px-2">Events</a></Link>
           <Link href={'/people'} ><a className="px-2">People</a></Link>
         </nav>
         <Link href={'/'}>
           <a >
-            &copy; 2021 Dayton Uncovered
+            &copy; 2021 DAYTON LOCAL MUSIC
           </a>
         </Link>
         <Link href={'/'}>

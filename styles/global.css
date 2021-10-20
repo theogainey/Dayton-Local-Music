@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .postContent{
-  @apply  pt-2 ;
+  @apply  pt-2 mb-2;
 }
 .postContent h2{
   @apply text-lg font-bold my-2
