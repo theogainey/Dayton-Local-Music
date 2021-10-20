@@ -20,14 +20,14 @@ export default function Home({allPostsData, allEventsData}) {
     <Layout >
       <Head>
         <title>Dayton Local Music</title>
-        <link rel="canonical" href="https://www.daytonlocalmusic.com" key="canonical"/>
+        <link rel="canonical" href="https://dayton-local-music.vercel.app" key="canonical"/>
         <meta name="description" content="Your guide to Dayton Ohio's independent music scene"/>
         <meta property="og:title" content="Dayton Local Music" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.daytonlocalmusic.com" />
+        <meta property="og:url" content="https://dayton-local-music.vercel.app" />
         <meta property="og:description" content="Your guide to Dayton Ohio's independent music scene"/>
-        <meta property="og:image" content="https://www.daytonlocalmusic.com/images/DaytonLocalMusic.PNG"/>
-        <meta property="twitter:image" content="https://www.daytonlocalmusic.com/images/DaytonLocalMusic.PNG"/>)}
+        <meta property="og:image" content="https://dayton-local-music.vercel.app/images/DaytonLocalMusic.PNG"/>
+        <meta property="twitter:image" content="https://dayton-local-music.vercel.app/images/DaytonLocalMusic.PNG"/>)}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:title" content="Dayton Local Music"  />
         <meta property="twitter:description"content="Your guide to Dayton Ohio's independent music scene"/>
