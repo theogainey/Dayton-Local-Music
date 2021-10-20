@@ -5,8 +5,10 @@ import {getPersonData, getAllPeopleIds} from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout'
 import BlogPostCard from '../../components/BlogPostCard'
 import EmailForm from '../../components/EmailForm'
+import {useFeatures} from '../../lib/featuretoggle'
 
 export default function Person({personData: {name, allPostsData}}){
+  const [state, dispatch] = useFeatures()
   const [searchValue, setSearchValue] = useState('')
   const [postIndex, setPostIndex] = useState(0)
   const filterPosts = allPostsData.filter((post) =>
@@ -18,7 +20,7 @@ export default function Person({personData: {name, allPostsData}}){
       <Head>
         <title>{name}</title>
       </Head>
-      <h1 className="mt-4 mb-2 text-6xl font-bold ">{name}</h1>
+      <h1 className="mt-4 mb-2 text-4xl font-bold ">{name}</h1>
       <BlogPostCard display="featured" {...allPostsData[0]}/>
       <div>
         <div className="w-full my-2">
@@ -38,7 +40,7 @@ export default function Person({personData: {name, allPostsData}}){
           <p className="text-lg font-bold text-center underline	my-2">LOAD MORE</p>
         </a>
       </div>
-      <EmailForm/>
+      {(state.userAuthentication==='true') &&(<EmailForm/>)}
     </Layout>
   )
 }

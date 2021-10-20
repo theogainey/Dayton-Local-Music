@@ -7,10 +7,12 @@ import YoutubeEmbed from '../../components/YoutubeEmbed'
 import {getPostsAdjacent, getAllPostIds, getPostsData } from '../../lib/markdownToHtml'
 import { parseISO, format } from 'date-fns'
 import { MDXRemote } from 'next-mdx-remote'
+import {useFeatures} from '../../lib/featuretoggle'
 
 export default function BlogPost({adjacentPosts, postData:{source, frontMatter, id, authorHref}}){
   const date = parseISO(frontMatter.date)
   const components = {Image, YoutubeEmbed}
+  const [state, dispatch] = useFeatures()
 
   return(
     <Layout >
@@ -70,7 +72,7 @@ export default function BlogPost({adjacentPosts, postData:{source, frontMatter, 
         </main>
       </article>
       <section>
-      <EmailForm/>
+      {(state.userAuthentication==='true') &&(<EmailForm/>)}
       <div className="w-full flex flex-row items-center justify-between	">
         {adjacentPosts[0] && (<Link href={`/blog/${adjacentPosts[0]}`}><a className="justify-self-start">&larr; previous post</a></Link>)}
         {adjacentPosts[1] && (<Link href={`/blog/${adjacentPosts[1]}`}><a className="justify-self-end	">next post &rarr;</a></Link>)}

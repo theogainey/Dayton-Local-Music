@@ -5,8 +5,10 @@ import {getSortedPostsData} from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout'
 import BlogPostCard from '../../components/BlogPostCard'
 import EmailForm from '../../components/EmailForm'
+import {useFeatures} from '../../lib/featuretoggle'
 
 export default function Blog({allPostsData}){
+  const [state, dispatch] = useFeatures()
   const [searchValue, setSearchValue] = useState('')
   const [postIndex, setPostIndex] = useState(0)
   const filterPosts = allPostsData.filter((post) =>
@@ -39,7 +41,7 @@ export default function Blog({allPostsData}){
           <p className="text-lg font-bold text-center underline	my-2">LOAD MORE</p>
         </a>
       </div>
-      <EmailForm/>
+      {(state.userAuthentication==='true') &&(<EmailForm/>)}
     </Layout>
   )
 }
