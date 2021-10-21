@@ -43,7 +43,7 @@ export default function Home({allPostsData, allEventsData}) {
             className="w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md  focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
-        <div className="divide-y  divide-solid">
+        <div className="divide-y divide-solid">
           {filterPosts.slice(1, (6+(postIndex*5))).map((post)=>
             <BlogPostCard key={post.id} {...post} />
           )}

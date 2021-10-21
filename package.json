@@ -8,12 +8,15 @@
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.6.1",
     "aws-sdk": "^2.1005.0",
+    "ioredis": "^4.28.0",
     "mdx-bundler": "^6.0.2",
+    "nanoid": "^3.1.30",
     "next": "latest",
     "next-mdx-remote": "^3.0.6",
     "next-remote-watch": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "swr": "^1.0.1",
     "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
