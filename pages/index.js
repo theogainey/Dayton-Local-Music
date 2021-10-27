@@ -10,14 +10,10 @@ import EmailForm from '../components/EmailForm'
 
 export default function Home({allPostsData, allEventsData}) {
   const [state, dispatch] = useFeatures()
-  const [searchValue, setSearchValue] = useState('')
-  const [postIndex, setPostIndex] = useState(0)
-  const filterPosts = allPostsData.filter((post) =>
-      post.title.toLowerCase().includes(searchValue.toLowerCase())
-    )
+  const [postIndex, setPostIndex] = useState(5)
 
   return (
-    <Layout >
+    <Layout>
       <Head>
         <title>Dayton Local Music</title>
         <link rel="canonical" href="https://dayton-local-music.vercel.app" key="canonical"/>
@@ -34,22 +30,14 @@ export default function Home({allPostsData, allEventsData}) {
       </Head>
       <BlogPostCard display="featured" {...allPostsData[0]}/>
       <div >
-        <h2 className="mt-4 mb-2 text-4xl font-bold">Latest Blog Posts</h2>
-        <div className="w-full my-2">
-          <input
-            type="text"
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Search articles"
-            className="w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md  focus:ring-blue-500 focus:border-blue-500"
-          />
-        </div>
+        <h2 className="mt-4 mb-2 text-4xl font-bold">Latest Posts</h2>
         <div className="divide-y divide-solid">
-          {filterPosts.slice(1, (6+(postIndex*5))).map((post)=>
+          {allPostsData.slice(1, postIndex).map((post)=>
             <BlogPostCard key={post.id} {...post} />
           )}
         </div>
-        <a onClick={()=>setPostIndex(postIndex+1)}>
-          <p className="text-lg font-bold text-center underline	my-2">MORE BLOG POSTS</p>
+        <a onClick={()=>setPostIndex(postIndex+5)}>
+          <p className="text-lg font-bold text-center underline	my-2">LOAD MORE POSTS</p>
         </a>
       </div>
       {(state.userAuthentication==='true') &&(<EmailForm/>)}
